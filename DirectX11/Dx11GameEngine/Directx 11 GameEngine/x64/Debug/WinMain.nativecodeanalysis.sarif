@@ -1,0 +1,92 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.28.29913.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "commandLine": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Enterprise\\VC\\Tools\\MSVC\\14.28.29910\\bin\\HostX86\\x64\\c1xx.dll\" -ACf{1F7B090C-16DB-4822-966A-A93D26ED4681} -ACpmspft140.dll -Alint -D_PREFAST_ -D_AST_FE_ -Analyze -zm0x0014B1C0 -il C:\\Users\\assw5\\AppData\\Local\\Temp\\_CL_6b87d3c3ast -typedil -f WinMain.cpp -Ze -D_MSC_EXTENSIONS -Zp16 -pc \\:/ -D_MSC_VER=1928 -D_MSC_FULL_VER=192829913 -D_MSC_BUILD=0 -D_M_AMD64=100 -ZILP448 -D_M_X64=100 -D_WIN64 -D_WIN32 -GR -D_CPPRTTI -nologo -W 3 -diagnostics:column -D_GUARDOVERFLOW_CRT_ALLOCATORS=1 -Ot -DCODE_ANALYSIS -D_DEBUG -D_WINDOWS -D_UNICODE -DUNICODE -EHs -D_CPPUNWIND -EHc -D__MSVC_RUNTIME_CHECKS -RTCs -RTCu -MDd -D_DEBUG -D_MT -D_DLL -GS -D_M_FP_PRECISE -permissive- -Zc:wchar_t -Zc:forScope -Fox64\\Debug\\WinMain.obj -Fdx64\\Debug\\vc142.pdb -Gd -analyze:projectdirectory G:\\GameEngine\\DirectX11\\Dx11GameEngine\\Directx 11 GameEngine -analyze:rulesetdirectory ;C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Enterprise\\Team Tools\\Static Analysis Tools\\\\Rule Sets; -analyze:ruleset C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Enterprise\\Team Tools\\Static Analysis Tools\\Rule Sets\\NativeRecommendedRules.ruleset -analyze:quiet -analyze:plugin C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Enterprise\\VC\\Tools\\MSVC\\14.28.29910\\bin\\HostX86\\x86\\EspXEngine.dll -FC -errorreport:prompt -I G:\\GameEngine\\DirectX11\\Dx11GameEngine\\Directx 11 GameEngine\\Includes -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Enterprise\\VC\\Tools\\MSVC\\14.28.29910\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Enterprise\\VC\\Tools\\MSVC\\14.28.29910\\atlmfc\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Enterprise\\VC\\Auxiliary\\VS\\include -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.18362.0\\ucrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.18362.0\\um -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.18362.0\\shared -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.18362.0\\winrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.18362.0\\cppwinrt -I C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.8\\Include\\um",
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///g:/gameengine/directx11/dx11gameengine/directx 11 gameengine/winmain.cpp"
+          },
+          "roles": [
+            "analysisTarget"
+          ],
+          "hashes": {
+            "md5": "1043fbce81c6b4225e24c6d24f26adcd"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///g:/gameengine/directx11/dx11gameengine/directx 11 gameengine/errorlogger.h"
+          },
+          "hashes": {
+            "md5": "9167360b701ed0d558175c93add7703a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///g:/gameengine/directx11/dx11gameengine/directx 11 gameengine/stringconvertor.h"
+          },
+          "hashes": {
+            "md5": "164a63e0540c9a99e11b42ad3686996a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///g:/gameengine/directx11/dx11gameengine/directx 11 gameengine/engine.h"
+          },
+          "hashes": {
+            "md5": "95e817e0e33030507bbeffff93565c3b"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///g:/gameengine/directx11/dx11gameengine/directx 11 gameengine/windowcontainer.h"
+          },
+          "hashes": {
+            "md5": "3a3aff88130ca3142a3d577d27e83752"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///g:/gameengine/directx11/dx11gameengine/directx 11 gameengine/renderwindow.h"
+          },
+          "hashes": {
+            "md5": "f9303d3deb10e536afb123cc75d46f0d"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///g:/gameengine/directx11/dx11gameengine/directx 11 gameengine/keyboard/keyboardclass.h"
+          },
+          "hashes": {
+            "md5": "f8b94c0ebe3af38900fcbe7d7b8dabdc"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///g:/gameengine/directx11/dx11gameengine/directx 11 gameengine/keyboard/keyboardevent.h"
+          },
+          "hashes": {
+            "md5": "be1957d29acb6ba6e5081b7b8dacf094"
+          }
+        }
+      ]
+    }
+  ]
+}

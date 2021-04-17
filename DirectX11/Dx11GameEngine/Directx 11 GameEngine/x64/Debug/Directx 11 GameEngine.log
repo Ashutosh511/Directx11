@@ -1,6 +1,4 @@
-﻿  Engine.cpp
-  RenderWindow.cpp
-  WinMain.cpp
-  WindowContainer.cpp
-  Generating Code...
+﻿  Graphics.cpp
+G:\GameEngine\DirectX11\Dx11GameEngine\Directx 11 GameEngine\Graphics\Graphics.cpp(135,22): warning C4244: '=': conversion from 'int' to 'FLOAT', possible loss of data
+G:\GameEngine\DirectX11\Dx11GameEngine\Directx 11 GameEngine\Graphics\Graphics.cpp(136,23): warning C4244: '=': conversion from 'int' to 'FLOAT', possible loss of data
   Directx 11 GameEngine.vcxproj -> G:\GameEngine\DirectX11\Dx11GameEngine\x64\Debug\Directx 11 GameEngine.exe

@@ -4,6 +4,16 @@ g:\gameengine\directx11\dx11gameengine\directx 11 gameengine\x64\debug\winmain.o
 g:\gameengine\directx11\dx11gameengine\directx 11 gameengine\x64\debug\stringconvertor.obj
 g:\gameengine\directx11\dx11gameengine\directx 11 gameengine\x64\debug\renderwindow.obj
 g:\gameengine\directx11\dx11gameengine\directx 11 gameengine\x64\debug\errorlogger.obj
+g:\gameengine\directx11\dx11gameengine\directx 11 gameengine\x64\debug\windowcontainer.obj
+g:\gameengine\directx11\dx11gameengine\directx 11 gameengine\x64\debug\engine.obj
+g:\gameengine\directx11\dx11gameengine\directx 11 gameengine\x64\debug\keyboardevent.obj
+g:\gameengine\directx11\dx11gameengine\directx 11 gameengine\x64\debug\keyboardclass.obj
+g:\gameengine\directx11\dx11gameengine\x64\debug\directx 11 gameengine.exe
+g:\gameengine\directx11\dx11gameengine\x64\debug\directx 11 gameengine.ilk
+g:\gameengine\directx11\dx11gameengine\x64\debug\directx 11 gameengine.pdb
 g:\gameengine\directx11\dx11gameengine\directx 11 gameengine\x64\debug\directx .602eedb4.tlog\cl.command.1.tlog
 g:\gameengine\directx11\dx11gameengine\directx 11 gameengine\x64\debug\directx .602eedb4.tlog\cl.read.1.tlog
 g:\gameengine\directx11\dx11gameengine\directx 11 gameengine\x64\debug\directx .602eedb4.tlog\cl.write.1.tlog
+g:\gameengine\directx11\dx11gameengine\directx 11 gameengine\x64\debug\directx .602eedb4.tlog\link.command.1.tlog
+g:\gameengine\directx11\dx11gameengine\directx 11 gameengine\x64\debug\directx .602eedb4.tlog\link.read.1.tlog
+g:\gameengine\directx11\dx11gameengine\directx 11 gameengine\x64\debug\directx .602eedb4.tlog\link.write.1.tlog

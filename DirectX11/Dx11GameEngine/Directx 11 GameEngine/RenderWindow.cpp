@@ -47,6 +47,29 @@ bool RenderWindow::Initialize(WindowContainer *pWindowContainer, HINSTANCE hInst
 	return true;
 }
 //
+// HandleMsgRedirect function
+// 
+LRESULT CALLBACK HandleMsgRedirect(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
+{
+	switch (uMsg)
+	{
+		// All other messages
+		case WM_CLOSE:
+		{
+			DestroyWindow(hWnd);
+			return 0;
+		}
+
+		default:
+		{
+			// retrive pointer to window class
+			WindowContainer* const pWindow = reinterpret_cast<WindowContainer*>(GetWindowLongPtr(hWnd, GWLP_USERDATA));
+			// forward message to window class handler
+			return pWindow->WindowProc(hWnd, uMsg, wParam, lParam);
+		}
+	}
+
+}
 // 
 // 
 // 
@@ -56,7 +79,7 @@ bool RenderWindow::Initialize(WindowContainer *pWindowContainer, HINSTANCE hInst
 // 
 // 
 //
-LRESULT CALLBACK WindowProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
+LRESULT CALLBACK HandleMessageSetup(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 {
 	switch (uMsg)
 	{
@@ -83,11 +106,11 @@ LRESULT CALLBACK WindowProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 			}
 
 			SetWindowLongPtr(hWnd, GWLP_USERDATA, reinterpret_cast<LONG_PTR>(pWindow));
-			SetWindowLongPtr(hWnd, GWLP_WNDPROC, reinterpret_cast<LONG_PTR>(HandleMsgRedirect);
+			SetWindowLongPtr(hWnd, GWLP_WNDPROC, reinterpret_cast<LONG_PTR>(HandleMsgRedirect));
 			
 			return pWindow->WindowProc(hWnd, uMsg, wParam, lParam);
 
-			//WindowContainer* const pWindow = reinterpret_cast<WindowContainer*>(GetWindowLongPtr(hWnd, GWLP_USERDATA));
+			
 			
 			//return DefWindowProc(hWnd, uMsg, wParam, lParam);
 		}
@@ -118,7 +141,7 @@ void RenderWindow::RegisterWindowClass()
 	wcex.cbClsExtra = 0;
 
 	wcex.style = CS_HREDRAW | CS_VREDRAW | CS_OWNDC;
-	wcex.lpfnWndProc = WindowProc;
+	wcex.lpfnWndProc = HandleMessageSetup;
 	wcex.hInstance = this->hInstance;
 	wcex.hIcon = NULL;
 	wcex.hIconSm = NULL;
@@ -139,7 +162,7 @@ bool RenderWindow::ProcessMessage()
 	//Handle window messages
 	MSG msg;
 	ZeroMemory(&msg, sizeof(MSG)); // Initialize the message structure
-	if (PeekMessage(&msg, this->handle, 0, 0, PM_REMOVE))
+	while (PeekMessage(&msg, this->handle, 0, 0, PM_REMOVE))
 	{
 		TranslateMessage(&msg);
 		DispatchMessage(&msg);
@@ -158,6 +181,11 @@ bool RenderWindow::ProcessMessage()
 
 	return true;
 
+}
+
+HWND RenderWindow::GetHWND() const
+{
+	return this->handle;
 }
 
 // RenderWindow Distructor

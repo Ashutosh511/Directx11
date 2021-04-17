@@ -5,7 +5,14 @@
       <FullPath>G:\GameEngine\DirectX11\Dx11GameEngine\x64\Debug\Directx 11 GameEngine.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
-  <ContentFiles />
+  <ContentFiles>
+    <ContentFile>
+      <FullPath>G:\GameEngine\DirectX11\Dx11GameEngine\x64\Debug\vertexshader.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>G:\GameEngine\DirectX11\Dx11GameEngine\x64\Debug\pixelshader.cso</FullPath>
+    </ContentFile>
+  </ContentFiles>
   <SatelliteDlls />
   <NonRecipeFileRefs />
 </Project>

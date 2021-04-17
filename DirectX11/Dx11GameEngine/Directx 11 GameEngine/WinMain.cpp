@@ -1,8 +1,7 @@
 #include <Windows.h>
 #include "ErrorLogger.h"
 #include "Engine.h"
-#pragma comment(lib, "d3d11.lib")
-#pragma comment(lib, "DirectXTK.lib")
+
 
 int CALLBACK wWinMain(  _In_     HINSTANCE hInstance,                    // handle to instance of program
 					    _In_opt_ HINSTANCE hPrevInstance,                // handle to prev instance not is use always zero
@@ -15,7 +14,8 @@ int CALLBACK wWinMain(  _In_     HINSTANCE hInstance,                    // hand
 	
 	while (engine.ProcessMessage() == true)
 	{
-
+		engine.Update();
+		engine.RenderFrame();
 	}
 	
 	return 0;
